@@ -1,0 +1,14 @@
+[Unit]
+Description=Kibana 5
+
+[Service]
+Type=oneshot
+ExecStart=/etc/init.d/kibana start
+ExecStop=/etc/init.d/kibana stop
+#Restart=always
+#RestartSec=5
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+
